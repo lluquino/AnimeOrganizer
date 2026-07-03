@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Custom
+tests
+test_data
+SPECS.md
+comandos.txt

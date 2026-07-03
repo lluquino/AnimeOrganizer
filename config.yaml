@@ -1,0 +1,35 @@
+watch_dir: /downloads
+output_dir: /anime-library
+log_level: DEBUG
+collision_mode: keep_best
+title_format: title_case
+output_pattern: "{title}/Season {season}/{title} s{season:d}e{episode:d}{ep_name}{ext}"
+special_pattern: "{title}/{special}/{title} - Special {episode:d}{ep_name}{ext}"
+
+specials:
+  default_mode: "folder"
+  folder: "Specials"
+
+specials_overrides:
+  "Lord of Mysteries":
+    mode: "sequential"
+
+title_mappings:
+
+arc_mappings:
+  "One Piece":
+    1: [1, 61]
+    4: [62, 135]
+    6: [136, 206]
+    8: [207, 318]
+    10: [319, 377]
+    12: [378, 421]
+    13: [422, 516]
+    14: [517, 574]
+    16: [575, 645]
+    17: [626, 746]
+    18: [747, 779]
+    19: [780, 877]
+    21: [878, 1088]
+    22: [1089, 1155]
+    23: [1156]

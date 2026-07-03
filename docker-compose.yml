@@ -1,0 +1,11 @@
+services:
+  organizer:
+    build: .
+    container_name: anime-organizer
+    restart: unless-stopped
+    volumes:
+      - ./test_data/origin:/downloads
+      - ./test_data/destination:/anime-library
+      - ./test_data/config_e2e.yaml:/app/config.yaml
+    environment:
+      - ANIME_CONFIG=/app/config.yaml
