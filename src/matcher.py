@@ -174,10 +174,15 @@ class AnimeMatcher:
         self, media: AniListMedia, episode: int
     ) -> Optional[int]:
         title = media.best_title
-        if title not in self.config.arc_mappings:
+        title_lower = title.lower()
+        arc_key = next(
+            (k for k in self.config.arc_mappings if k.lower() == title_lower),
+            None,
+        )
+        if arc_key is None:
             return None
 
-        arcs = self.config.arc_mappings[title]
+        arcs = self.config.arc_mappings[arc_key]
         for arc_num in sorted(arcs.keys()):
             bounds = arcs[arc_num]
             if isinstance(bounds, list):

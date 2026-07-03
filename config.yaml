@@ -14,7 +14,7 @@ specials_overrides:
   "Lord of Mysteries":
     mode: "sequential"
 
-title_mappings:
+# title_mappings:
 
 arc_mappings:
   "One Piece":
