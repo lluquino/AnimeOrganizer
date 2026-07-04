@@ -36,8 +36,8 @@ Docker service that monitors a download folder, identifies anime episodes via th
 ### 1. Clone
 
 ```bash
-git clone https://github.com/yourname/anime-organizer.git
-cd anime-organizer
+git clone https://github.com/lluquino/AnimeOrganizer.git
+cd AnimeOrganizer
 ```
 
 ### 2. Configure
