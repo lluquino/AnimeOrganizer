@@ -154,12 +154,13 @@ class FileOrganizer:
 
         dest_path = os.path.join(self.config.output_dir, relative)
         dest_dir = os.path.dirname(dest_path)
+        original_dest = dest_path
         dest_path = _resolve_collision(dest_path, src_path, self.config.collision_mode)
 
         if dest_path is None:
             self.logger.info(
                 "Kept existing: %s, removed source: %s",
-                os.path.relpath(path, self.config.output_dir),
+                os.path.relpath(original_dest, self.config.output_dir),
                 os.path.basename(src_path),
             )
             os.remove(src_path)
